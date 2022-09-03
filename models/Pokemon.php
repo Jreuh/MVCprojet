@@ -8,5 +8,6 @@ class Pokemon extends Model
         $this->table = "pokemon";
         $this->getConnection();
     }
+    
   
 }
