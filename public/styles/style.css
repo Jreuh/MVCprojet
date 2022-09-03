@@ -1,0 +1,77 @@
+.container,
+.raw {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.card {
+  flex-basis: 20%;
+  border: 1px solid black;
+  border-radius: 7px;
+  height: 70vh;
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.card > img {
+  max-width: 200px;
+  max-height: 200px;
+}
+.title {
+  display: flex;
+  width: fit-content;
+  font-weight: bold;
+}
+.pokemon-name {
+  padding-left: 20px;
+}
+
+.plante {
+  background-color: green;
+}
+.dragon {
+  background-color: lightblue;
+}
+.feu {
+  background-color: orange;
+}
+.electric {
+  background-color: yellow;
+}
+.eau {
+  background-color: rgb(91, 91, 237);
+}
+.psy {
+  background-color: pink;
+}
+.spectre {
+  background-color: blueviolet;
+}
+.poison {
+  background-color: purple;
+}
+.plante {
+  background-color: green;
+}
+.roche {
+  background-color: grey;
+}
+.sol {
+  background-color: rgb(154, 107, 7);
+}
+.glace {
+  background-color: aliceblue;
+}
+.insect {
+  background-color: lightgreen;
+}
+.combat {
+  background-color: red;
+}
+.normal {
+  background-color: beige;
+}
