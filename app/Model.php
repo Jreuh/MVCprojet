@@ -47,4 +47,19 @@ abstract class Model
         $query->execute();
         return   $query->fetch();
     }
+
+    public function creatPoke($number, $firstname, $type1, $type2, $image)
+    {
+        $db = $this->_connexion;
+        $sql = 'INSERT INTO pokemon (number,`first_name`,type1,type2,image)
+    VALUES (:number, :firstname,:type1,:type2,:image )';
+        $query = $db->prepare($sql);
+        $query->bindValue(':number', $number, PDO::PARAM_STR);
+        $query->bindValue(':firstname', $firstname, PDO::PARAM_STR);
+        $query->bindValue(':type1', $type1, PDO::PARAM_STR);
+        $query->bindValue(':type2', $type2, PDO::PARAM_STR);
+        $query->bindValue(':image', $image, PDO::PARAM_STR);
+        $query->execute();
+        return $query;
+    }
 }

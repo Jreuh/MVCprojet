@@ -1,3 +1,4 @@
+<?php $title = 'Fiche Pokemon' ?>
 <div class="card <?php
                     if ($pokemon['type1'] === 'Plante') {
                         echo "plante";
