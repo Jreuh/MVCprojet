@@ -38,7 +38,6 @@ class Pokemon extends Model
     public function deletePoke($id)
     {
         $db = $this->_connexion;
-        $id = strip_tags(($_GET['id']));
         $sql = "DELETE FROM pokemon WHERE id= $id;";
         $query = $db->prepare($sql);
         $query->execute();

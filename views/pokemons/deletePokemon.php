@@ -59,8 +59,8 @@
         <div>
             <p>Etes vous sur de vouloir supprimer <?= $pokemon['first_name'] ?></p>
             <form action="" method="post">
-                <button type="submit" value="approve">Effacer</button>
-                <button type="submit" value="cancel">Annuler</button>
+                <button type="submit" value="approve" name="approve">Effacer</button>
+                <button type="submit" value="cancel" name="cancel">Annuler</button>
             </form>
         </div>
     </div>

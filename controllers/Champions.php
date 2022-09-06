@@ -1,6 +1,4 @@
 <?php
-class Pokemons extends Controller{
+class Champions extends Controller{
     
 }
-
-?>

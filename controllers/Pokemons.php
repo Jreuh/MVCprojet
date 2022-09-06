@@ -97,7 +97,7 @@ class Pokemons extends Controller
                 $this->render("updatePokemon/$id");
             }
             $this->Pokemon->updatePoke($id, $number, $firstname, $type1, $type2, $image);
-
+            $this->Pokemon->getOne($id);
             header('Location: http://localhost/MVCPOO/Pokemons/fiche/' . $id);
         }
     }
@@ -106,10 +106,14 @@ class Pokemons extends Controller
         $this->loadModel('Pokemon');
         $pokemon = $this->Pokemon->getOne($id);
         $this->render('deletePokemon', compact('pokemon'));
+
         if (isset($_POST['approve'])) {
+            var_dump($pokemon);
             $this->Pokemon->deletePoke($id);
+            header('Location: http://localhost/MVCPOO/Pokemons');
         }
         if (isset($_POST['cancel'])) {
+            echo "TATA";
             header('Location: http://localhost/MVCPOO/Pokemons/fiche/' . $id);
         }
     }
