@@ -62,9 +62,6 @@ class Pokemons extends Controller
         $this->loadModel('Pokemon');
         $pokemon = $this->Pokemon->getOne($id);
         $this->render('updatePokemon', compact('pokemon'));
-        var_dump(ROOT);
-        $path = ROOT . "Pokemons/fiche/$id";
-        var_dump($path);
         if (isset($_POST['editp'])) {
 
             if (isset($_POST['number']) && !empty($_POST['number']) && $_POST != '***') {
@@ -101,6 +98,18 @@ class Pokemons extends Controller
             }
             $this->Pokemon->updatePoke($id, $number, $firstname, $type1, $type2, $image);
 
+            header('Location: http://localhost/MVCPOO/Pokemons/fiche/' . $id);
+        }
+    }
+    public function deletePokemon($id)
+    {
+        $this->loadModel('Pokemon');
+        $pokemon = $this->Pokemon->getOne($id);
+        $this->render('deletePokemon', compact('pokemon'));
+        if (isset($_POST['approve'])) {
+            $this->Pokemon->deletePoke($id);
+        }
+        if (isset($_POST['cancel'])) {
             header('Location: http://localhost/MVCPOO/Pokemons/fiche/' . $id);
         }
     }

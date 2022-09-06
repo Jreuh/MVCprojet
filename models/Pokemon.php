@@ -35,7 +35,7 @@ class Pokemon extends Model
         $query->bindValue(':image', $image, PDO::PARAM_STR);
         $query->execute();
     }
-    public function deletePoke()
+    public function deletePoke($id)
     {
         $db = $this->_connexion;
         $id = strip_tags(($_GET['id']));
