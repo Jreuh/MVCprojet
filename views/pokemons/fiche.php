@@ -54,4 +54,9 @@
         <p class="card-text type "><img src="../../../MVCPOO/public/images/Type/<?= $pokemon['type1'] ?>" class="card-img-top type" alt=<?= $pokemon['type1'] ?>>
         <p class="card-text "><img src="../../../MVCPOO/public/images/Type/<?= $pokemon['type2'] ?>" class="card-img-top type" alt=<?= $pokemon['type2'] ?>>
     </div>
+    <div>
+
+        <a href="../../Pokemons/updatePokemon/<?= $pokemon['id'] ?>">Modifier <?= $pokemon['first_name'] ?>?</a>
+        <a href="../../Pokemons/deletePokemon/<?= $pokemon['id'] ?>">Effacer <?= $pokemon['first_name'] ?>?</a>
+    </div>
 </div>
