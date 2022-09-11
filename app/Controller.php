@@ -16,6 +16,5 @@ abstract class Controller
         require_once(ROOT . 'views/' . strtolower(get_class($this)) . '/' . $file . '.php');
         $content = ob_get_clean();
         require_once('./views/layouts/default.php');
-    
     }
 }

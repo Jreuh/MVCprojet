@@ -1,11 +1,11 @@
 <?php
 class Pokemons extends Controller
 {
-    public function index()
+    public function liste()
     {
         $this->loadModel('Pokemon');
         $pokemons = $this->Pokemon->getAll();
-        $this->render('index', compact('pokemons'));
+        $this->render('liste', compact('pokemons'));
     }
 
     public function fiche($id)
